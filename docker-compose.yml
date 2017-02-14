@@ -1,0 +1,19 @@
+web:
+  container_name: sample-web
+  build: .
+  dockerfile: Dockerfile.dev
+  volumes:
+   - ./:/src/
+   - ./output:/app
+  # dns: 208.67.222.222
+server:
+  image: ttdr.tectoro.com/testuser/web-server-go:1.0.5
+  volumes:
+   - ./output/public:/public
+  ports:
+  - "1000:8000"
+  environment:
+  - APP=wf
+  links:
+  - web
+  # dns: 208.67.222.222

@@ -1,0 +1,17 @@
+FROM mhart/alpine-node:0.12
+
+RUN apk update && apk add git
+
+# Install node dependencies and cache
+ENV NODE_PATH /tmp/node_modules
+ADD package.json /tmp/package.json
+RUN cd /tmp && npm install
+
+# Install bower dependencies
+ADD bower.json /tmp/bower.json
+ADD gulpfile-bower.js /tmp/gulpfile.js
+ADD build-config.js /tmp/build-config.js
+
+WORKDIR /src
+
+CMD cd /tmp && /tmp/node_modules/.bin/gulp bower && cd /src && /tmp/node_modules/.bin/gulp

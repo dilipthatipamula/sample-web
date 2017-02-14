@@ -1,0 +1,32 @@
+nav.navbar.navbar-lower
+  .container-fluid
+    .row.m-t-30
+      h5.text-center(ng-if='logout')
+        | You have been successfully Logged Out!
+      h4.text-center.text-danger(ng-show='message')
+        | {{message}}  
+    .row
+      .col-sm-6.col-md-4.col-md-offset-4.login.col-xs-12.col-sm-offset-3
+        form.form-horizontal(role='form' name="loginForm",novalidate='')
+          .form-group
+            div.img
+              h3.text-center
+                | SIGN IN
+          .form-group
+            .row
+              .col-md-10.col-xs-10.col-md-offset-1.col-xs-offset-1  
+                .input-group.input-group-lg
+                  span#sizing-addon1.input-group-addon
+                    i.fa.fa-envelope
+                  input.form-control(type='text', placeholder='Username',ng-model="credentials.userName")
+          .form-group
+            .row
+              .col-md-10.col-xs-10.col-md-offset-1.col-xs-offset-1  
+                .input-group.input-group-lg
+                  span#sizing-addon1.input-group-addon
+                    i.fa.fa-lock.fa-lg
+                  input.form-control(type='password', placeholder='Password',ng-model="credentials.password")
+          .form-group
+            .row
+              .col-md-10.col-xs-10.col-md-offset-1.col-xs-offset-1
+                input.btn.btn-primary.btn-lg.btn-block(type='submit', value='Sign In',ng-click="doLogin()",ng-disabled='loginForm.$invalid')

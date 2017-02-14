@@ -1,0 +1,16 @@
+{
+  "name": "highstock",
+  "version": "5.0.7",
+  "main": "highstock.js",
+  "homepage": "https://github.com/highslide-software/highstock-release",
+  "_release": "5.0.7",
+  "_resolution": {
+    "type": "version",
+    "tag": "v5.0.7",
+    "commit": "8169255e4ee3d4d19eca07a35dc727c0076368e5"
+  },
+  "_source": "https://github.com/highslide-software/highstock-release.git",
+  "_target": "^5.0.7",
+  "_originalSource": "highstock-release",
+  "_direct": true
+}

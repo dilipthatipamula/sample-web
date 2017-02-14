@@ -1,0 +1,46 @@
+{
+  "name": "wf-web",
+  "version": "1.0.0",
+  "description": "eRaksha",
+  "private": true,
+  "main": "index.js",
+  "devDependencies": {
+    "gulp": "~3.9",
+    "gulp-angular-templatecache": "1.9.1",
+    "gulp-bower": "0.0.13",
+    "gulp-clean": "^0.3.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssmin": "^0.1.7",
+    "gulp-flatten": "~0.3",
+    "gulp-htmlmin": "~3.0",
+    "gulp-install": "^0.6.0",
+    "gulp-jade": "~1.1",
+    "gulp-less": "~3.3",
+    "gulp-ng-annotate": "^2.0.0",
+    "gulp-ng-html2js": "^0.2.2",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^2.0.0",
+    "mkdirp": "^0.5.1",
+    "path": "^0.12.7",
+    "run-sequence": "~1.2"
+  },
+  "scripts": {
+    "build": "/root/node_modules/.bin/gulp build",
+    "start:dev": "/root/node_modules/.bin/gulp",
+    "start": "node --harmony index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com:tt-mytec/eraksha-web.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/tectoro/eraksha-web/issues"
+  },
+  "homepage": "https://gitlab.com/tectoro/eraksha-web#README",
+  "dependencies": {
+    "gulp-install": "^0.6.0"
+  }
+}

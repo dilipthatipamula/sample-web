@@ -1,0 +1,15 @@
+# docker-sync.yml
+syncs:
+# this name has to be unique and is used in docker-compose.yml as well
+  output-sync:
+    src: './output' # the directory on the host system
+    dest: '/app' # the directory on the container
+    sync_host_ip: '192.168.0.26' # localhost for docker for mac
+    sync_host_port: 10872 # unique port
+    sync_strategy: 'unison'
+  src-sync:
+    src: './' # the directory on the host system
+    dest: '/src' # the directory on the container
+    sync_host_ip: '192.168.0.26' # localhost for docker for mac
+    sync_host_port: 10873 # unique port
+    sync_strategy: 'unison'
